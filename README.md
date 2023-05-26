@@ -1,8 +1,9 @@
 # curso-dataeng-coder
 
 ## Pasos
+1. Registrarse en la API de [Spotify](https://developer.spotify.com/documentation/web-api/tutorials/getting-started).
 
-Crea el entorno virtual suguiendo las siguentes instrucciones en un terminal:
+2. Crea el entorno virtual suguiendo las siguentes instrucciones en un terminal:
 
 ### Windows
 ```sh
