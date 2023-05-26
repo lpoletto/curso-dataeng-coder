@@ -2,7 +2,7 @@
 
 ## Pasos
 
-Crea el entorno virtual suguiendo las siguentes instrucciones en una terminal:
+Crea el entorno virtual suguiendo las siguentes instrucciones en un terminal:
 
 ### Windows
 ```sh
