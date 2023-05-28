@@ -1,4 +1,5 @@
 # curso-dataeng-coder
+ETL que extrae las canciones reproducidas del día anterior de un usuario de Spotify
 
 ## Pasos
 1. Registrarse en la API de [Spotify](https://developer.spotify.com/documentation/web-api/tutorials/getting-started).
