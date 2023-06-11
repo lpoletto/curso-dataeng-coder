@@ -6,7 +6,6 @@ from io import StringIO
 def check_if_valid_data(df: pd.DataFrame) -> bool:
     # Check si el dataframe está vacío
     if df.empty:
-        print("No songs downloaded. Finishing execution")
         return False
     
     # Check si la Primary Key es única 
