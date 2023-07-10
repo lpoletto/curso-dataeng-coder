@@ -21,6 +21,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
 
 # C extensions
 *.so
@@ -213,5 +214,9 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# docker_shared_folder
+docker_shared_folder/postgres_data
+docker_shared_folder/working_dir/.ipynb_checkpoints
 
 # End of https://www.toptal.com/developers/gitignore/api/python,windows,linux
