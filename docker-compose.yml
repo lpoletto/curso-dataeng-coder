@@ -24,13 +24,13 @@ services:
       - ./docker_shared_folder/working_dir/.env
     networks:
       my_net:
-        ipv4_address: 172.6.6.1
+        ipv4_address: 172.7.7.1
 
   postgres:
-    container_name: sem7-postgres-db
+    container_name: postgres-db
     # Official Postgres image from DockerHub (we use the last version)
     image: 'postgres:15'
-    hostname: postgres_sem7
+    hostname: postgres_db
     volumes:
       - ./docker_shared_folder/postgres_data:/var/lib/postgresql/data
     ports:
@@ -47,6 +47,6 @@ networks:
     ipam: # IP Address Management
       driver: default
       config:
-        - subnet: 172.6.6.0/16 # Subnet
+        - subnet: 172.7.7.0/16 # Subnet
         # 172.6.6.0 is the default subnet for docker
         # 16 is the number of bits used for the network
