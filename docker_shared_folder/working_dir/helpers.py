@@ -4,14 +4,13 @@ import os
 import json
 import base64
 from requests import post, get
-from dotenv import load_dotenv
 
 
-load_dotenv()
+env = os.environ
 
 # Spotify settings
-CLIENT_ID = os.getenv("CLIENT_ID")
-CLIENT_SECRET = os.getenv("CLIENT_SECRET")
+CLIENT_ID = env['CLIENT_ID']
+CLIENT_SECRET = env['CLIENT_SECRET]
 
 def get_token():
     auth_string = CLIENT_ID + ":" + CLIENT_SECRET
