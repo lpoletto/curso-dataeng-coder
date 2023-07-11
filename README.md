@@ -1,6 +1,6 @@
 # ETL-Spotify 
 
-Repositorio para el proyecto final del curso de Data Engineering en CODERHOUSE.
+Repositorio para el proyecto final del curso de Data Engineering en [CODERHOUSE](https://www.coderhouse.com/).
 
 ![Arquitectura](etl-arquitectura.png)
 
