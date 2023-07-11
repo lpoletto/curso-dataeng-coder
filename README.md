@@ -1,4 +1,7 @@
-# curso-dataeng-coder
+# ETL-Spotify 
+
+![Arquitectura](etl-arquitectura.png)
+
 ETL que extrae las canciones reproducidas del día anterior de un usuario de Spotify
 
 ## Pasos
