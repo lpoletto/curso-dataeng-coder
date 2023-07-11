@@ -1,5 +1,4 @@
 from io import StringIO
-import pandas as pd
 import csv
 import os
 import json
@@ -10,8 +9,8 @@ from requests import post, get
 env = os.environ
 
 # Spotify settings
-CLIENT_ID = env['CLIENT_ID']
-CLIENT_SECRET = env['CLIENT_SECRET']
+CLIENT_ID = env['SPOTIFY_CLIENT_ID']
+CLIENT_SECRET = env['SPOTIFY_CLIENT_SECRET']
 
 def get_token():
     auth_string = CLIENT_ID + ":" + CLIENT_SECRET
@@ -27,10 +26,14 @@ def get_token():
         "grant_type": "client_credentials"
     }
     result = post(url, headers=headers, data=data)
-    json_result = json.loads(result.content)
-    token = json_result["access_token"]
-    return token
+    if result.status_code == 200:
+        json_result = json.loads(result.content)
+        token = json_result["access_token"]
+    else:
+        print("Error al generar el token")
+        raise Exception("Error al generar el token")
 
+    return token
 
 def get_auth_header(token):
     return {
@@ -45,10 +48,14 @@ def search_for_artist(token, artist_name):
     
     query_url = url + query
     result = get(query_url, headers=headers)
-    json_result = json.loads(result.content)["artists"]["items"]
+    if result.status_code == 200:
+        json_result = json.loads(result.content)["artists"]["items"]
+    else:
+        print("Error al extraer datos de la Web API Spotify")
+        raise Exception("Error al extraer datos de la Web API Spotify")
 
     if len(json_result) == 0:
-        print("No artist with this name exists...")
+        print("No existe artista con ese nombre...")
         return None
     
     return json_result[0]
@@ -62,7 +69,12 @@ def get_artist_top_tracks(token, id_artist, country):
     
     query_url = url + query
     result = get(query_url, headers=headers)
-    json_result = json.loads(result.content)["tracks"]
+    if result.status_code == 200:
+        json_result = json.loads(result.content)["tracks"]
+    else:
+        print("Error al extraer canciones del artista")
+        raise Exception("Error al extraer canciones del artista")
+
     return json_result
 
 
