@@ -1,4 +1,4 @@
-# ETL-Spotify 
+# ETL-Spotify | Data Engineering Project 
 
 Repositorio para el proyecto final del curso de Data Engineering en [CODERHOUSE](https://www.coderhouse.com/).
 
