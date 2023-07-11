@@ -10,7 +10,7 @@ env = os.environ
 
 # Spotify settings
 CLIENT_ID = env['CLIENT_ID']
-CLIENT_SECRET = env['CLIENT_SECRET]
+CLIENT_SECRET = env['CLIENT_SECRET']
 
 def get_token():
     auth_string = CLIENT_ID + ":" + CLIENT_SECRET
