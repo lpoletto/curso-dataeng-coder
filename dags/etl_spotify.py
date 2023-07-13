@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS {REDSHIFT_SCHEMA}.popular_songs(
 
 
 defaul_args = {
-    "owner": "Lautar Poletto",
+    "owner": "Lautaro Poletto",
     "start_date": datetime(2023, 7, 1),
     "retries": 0,
     "retry_delay": timedelta(seconds=5),
